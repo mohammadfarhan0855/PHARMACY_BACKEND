@@ -117,7 +117,10 @@ app.post('/api/login', async (req, res) => {
 // ==========================================
 // SERVER INITIALIZATION
 // ==========================================
-const PORT = 5000;
+
+// Render provides its own port in process.env.PORT
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
